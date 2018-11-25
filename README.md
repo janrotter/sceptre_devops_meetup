@@ -16,7 +16,7 @@ npm install -g reveal-md
 Run:
 
 ```
-reveal-md presentation/slides/rule_the_aws.md
+reveal-md presentation/rule_the_aws.md
 ```
 
 ## How to use the example projects?

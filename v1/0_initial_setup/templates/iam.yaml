@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: A sample template
+Resources:
+  IamUser:
+    Type: AWS::IAM::User
+    Properties:
+      Policies:
+        - PolicyName: CloudformationAndThings
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action: "cloudformation:*"
+                Resource: "*"
+      UserName: sceptre
+  AccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      Serial: 1
+      Status: Active
+      UserName: !Ref IamUser
+Outputs:
+  AccessKeyId:
+    Value: !Ref AccessKey
+  SecretAccessKey:
+    Value: !GetAtt AccessKey.SecretAccessKey

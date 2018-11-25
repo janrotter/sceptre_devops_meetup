@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "A sample yaml template."
+Parameters:
+  Nonce:
+    Type: String
+    Default: param_nonce
+Resources:
+{% for i in range(1, sceptre_user_data.number_of_dummy_resources) %}
+  DummyResource{{ i }}:
+    Type: AWS::CloudFormation::WaitConditionHandle
+    Metadata:
+      Comment: Dummy resource to force update of cloudformation every time
+      ParamNonce: !Ref Nonce
+{% endfor %}
+Outputs:
+  Nonce:
+    Value: !Ref Nonce

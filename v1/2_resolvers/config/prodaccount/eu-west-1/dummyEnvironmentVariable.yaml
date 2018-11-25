@@ -1,0 +1,3 @@
+template_path: templates/dummy.yaml
+parameters:
+  Nonce: !environment_variable USER

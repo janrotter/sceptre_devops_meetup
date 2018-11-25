@@ -1,0 +1,4 @@
+project_code: sceptre-4
+region: eu-west-1
+profile: sceptre_sandbox
+#template_bucket_name: somebucketname

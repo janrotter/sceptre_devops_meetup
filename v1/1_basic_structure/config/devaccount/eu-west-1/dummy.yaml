@@ -1,0 +1,2 @@
+template_path: templates/dummy.yaml
+#stack_name: some_existing_stack

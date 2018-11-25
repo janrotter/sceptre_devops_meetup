@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "A sample yaml template."
+Parameters:
+  Nonce:
+    Type: String
+    Default: param_nonce
+Resources:
+  DummyResource:
+    Type: AWS::CloudFormation::WaitConditionHandle
+    Metadata:
+      Comment: Dummy resource to force update of cloudformation every time
+      ParamNonce: !Ref Nonce
+Outputs:
+  Nonce:
+    Value: !Ref Nonce

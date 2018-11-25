@@ -1,0 +1,16 @@
+template_path: templates/dummy.yaml
+parameters:
+  Nonce: somenonceab
+hooks:
+  before_update:
+    - !cmd echo "before update hook!"
+  after_update:
+    - !cmd echo "after update hook!"
+  before_create:
+    - !cmd echo "before create hook!"
+  after_create:
+    - !cmd echo "after create hook!"
+  before_delete:
+    - !cmd echo "before delete hook!"
+  after_delete:
+    - !cmd echo "after delete hook!"

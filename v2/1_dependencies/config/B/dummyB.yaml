@@ -1,0 +1,3 @@
+template_path: dummy.yaml
+parameters:
+  Nonce: !stack_output A/dummyB.yaml::Nonce

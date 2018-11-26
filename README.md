@@ -43,6 +43,8 @@ respectively.
 
 Once there, run:
 ```pipenv shell```
+followed by
+```pipenv install```
 to setup the virtual environment with the appropriate sceptre version.
 
 **Now you can easily play with the provided sceptre projects!**
@@ -53,6 +55,9 @@ vagrant@ubuntu-bionic:~$ cd /vagrant/v1
 vagrant@ubuntu-bionic:/vagrant/v1$ pipenv shell
 Launching subshell in virtual environment…
 vagrant@ubuntu-bionic:/vagrant/v1$  . /home/vagrant/.local/share/virtualenvs/v1-jH8cTHgZ/bin/activate
+(v1) vagrant@ubuntu-bionic:/vagrant/v1$ pipenv install
+Installing dependencies from Pipfile.lock (6198e0)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 16/16 — 00:00:04
 (v1) vagrant@ubuntu-bionic:/vagrant/v1$ ls
 0_initial_setup  1_basic_structure  2_resolvers  3_hooks  4_jinja  Pipfile  Pipfile.lock
 (v1) vagrant@ubuntu-bionic:/vagrant/v1$ cd 1_basic_structure/
